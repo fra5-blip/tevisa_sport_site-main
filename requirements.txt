@@ -1,0 +1,16 @@
+Flask
+Flask-Bootstrap
+Flask-Login
+Flask-Migrate
+Flask-SQLAlchemy
+Flask-WTF
+Flask==3.0.3
+Jinja2==3.1.4
+MarkupSafe==3.0.1
+Werkzeug==3.0.4
+blinker==1.8.2
+click==8.1.7
+email-validator
+itsdangerous==2.2.0
+psycopg2-binary==2.9.9
+spacy

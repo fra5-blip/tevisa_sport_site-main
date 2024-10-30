@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+  <header>
+    <ul>
+      <li><a href="#registration" class="logo">Registration Form</a></li>
+      <li><a href="#home" class="home-nav">Home</a></li>
+    </ul>
+    
+  </header>
+  <hr>
+  <nav>
+    <a href="institution-registration.html" class="nav-button">Institution's Details</a>
+    <a href="team-registration.html" class="nav-button">Team's Details</a>
+    <a href="participan-registration.html"  class="nav-button current-page">Participant's Details</a>s
+  </nav>
+  <main class="registration-form">
+    <form action="#site-url">
+        First Name:<br>
+      <input type="text" name="firstname" placeholder="Participant's first name" class="input-bar" required>
+      <br>
+      <br>
+      Second Name:<br>
+      <input type="text" name="secondname" placeholder="Participant's second name" class="input-bar" required>
+      <br>
+      ID:<br>
+      <input type="text" name="ID" placeholder="Participant's ID" class="input-bar" required>
+      <br>
+      Gender:<br>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other <br>
+      <br>
+      Age: <br>
+      <input type="number" name="age" min="0" max="100" required>
+      <br><br>
+      <input type="submit" value="Submit" class="submit-button">
+    </form>
+  </main>
+  <footer>
+    <p>@TEVISA</p>
+  </footer>
+  
+</body>
+</html>

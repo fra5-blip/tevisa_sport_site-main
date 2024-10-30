@@ -1,0 +1,67 @@
+{% extends './public/base.html' %}
+
+{% block title %} Team Registration {% endblock %}
+
+{% block content %}
+
+<div class="container bg-dark my-3">
+    <ul class="nav justify-content-center nav-fill">
+        <li class="nav-item">
+            <a class="nav-link link-light" href="./inst_registration">Institution</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light current-page" href="#">Team</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-light" href="./player_registration">Player</a>
+        </li>
+    </ul>
+</div>
+
+
+<!-- Form -->
+
+<div class="container d-flex justify-content-center">
+    <form action="#" class="border p-5" method="post">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="mb-3">
+            <label for="instName" class="form-label">Institution Name:</label>
+            <select class="form-select" name="Institution" id="instName" required>
+                {% for key, value in INSTITUTIONS.items() %}
+                    <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="team" class="form-label">Team Name:</label>
+            <input type="text" id="team" class="form-control" name="team_name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="coach" class="form-label">Coach:</label>
+            <input type="text" id="coach" class="form-control" name="coach" required>
+        </div>
+
+        <div class="mb-3">
+            <!--  User select -> From Registered Team -->
+            <label for="tournament" class="form-label">Tournament:</label>
+            <input type="text" id="tournament" value="TEST TOURNAMENT" class="form-control" name="tournament" required>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <input type="submit" value="Next" class="px-5 btn btn-dark">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

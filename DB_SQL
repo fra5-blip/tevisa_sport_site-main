@@ -1,0 +1,73 @@
+-- Institution Table
+CREATE TABLE Institution (
+    institution_id SERIAL PRIMARY KEY,
+    institution_name VARCHAR(100) NOT NULL
+);
+
+-- Tournament Table
+CREATE TABLE Tournament (
+    tournament_id SERIAL PRIMARY KEY,
+    tournament_name VARCHAR(100) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL
+);
+
+-- Group Table
+CREATE TABLE Groups (
+    group_id SERIAL PRIMARY KEY,
+    group_name VARCHAR(50) NOT NULL,
+    tournament_id INT REFERENCES Tournament(tournament_id) ON DELETE CASCADE
+);
+
+-- Coach Table
+CREATE TABLE Coach (
+    coach_id SERIAL PRIMARY KEY,
+    coach_name VARCHAR(100) NOT NULL,
+    experience_years INT NOT NULL
+);
+
+-- Team Table
+CREATE TABLE Teams (
+    team_id SERIAL PRIMARY KEY,
+    team_name VARCHAR(100) NOT NULL,
+    institution_id INT REFERENCES Institution(institution_id) ON DELETE CASCADE,
+    coach_id INT REFERENCES Coach(coach_id) ON DELETE SET NULL,
+    group_id INT REFERENCES Groups(group_id) ON DELETE SET NULL,
+    tournament_id INT REFERENCES Tournament(tournament_id) ON DELETE CASCADE
+);
+
+-- Player Table
+CREATE TABLE Players (
+    player_id SERIAL PRIMARY KEY,
+    player_name VARCHAR(100) NOT NULL,
+    team_id INT REFERENCES Teams(team_id) ON DELETE CASCADE
+);
+
+-- Fixtures Table
+CREATE TABLE Fixtures (
+    fixture_id SERIAL PRIMARY KEY,
+    fixture_date DATE NOT NULL,
+    team1_id INT REFERENCES Teams(team_id) ON DELETE CASCADE,
+    team2_id INT REFERENCES Teams(team_id) ON DELETE CASCADE,
+    tournament_id INT REFERENCES Tournament(tournament_id) ON DELETE CASCADE
+);
+
+-- Scores and Results Table
+CREATE TABLE Scores_Results (
+    score_id SERIAL PRIMARY KEY,
+    fixture_id INT REFERENCES Fixtures(fixture_id) ON DELETE CASCADE,
+    team1_score INT NOT NULL,
+    team2_score INT NOT NULL,
+    winning_team_id INT REFERENCES Teams(team_id) ON DELETE SET NULL
+);
+
+-- Group Standings Table
+CREATE TABLE Group_Standings (
+    standing_id SERIAL PRIMARY KEY,
+    group_id INT REFERENCES Groups(group_id) ON DELETE CASCADE,
+    team_id INT REFERENCES Teams(team_id) ON DELETE CASCADE,
+    points INT NOT NULL,
+    wins INT NOT NULL,
+    losses INT NOT NULL,
+    draws INT NOT NULL
+);

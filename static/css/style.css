@@ -1,0 +1,9 @@
+.current-page {
+    background-color: rgba(2, 60, 99, 0.479);
+    color: rgb(255, 255, 255) !important;
+}
+
+#landing-page-img {
+    height: 70vh !important;
+    width: 100% !important;
+}

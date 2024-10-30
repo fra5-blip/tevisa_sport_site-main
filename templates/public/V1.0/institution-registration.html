@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+  <header>
+    <ul>
+      <li><a href="#registration" class="logo">Registration Form</a></li>
+      <li><a href="#home" class="home-nav">Home</a></li>
+    </ul>
+
+  </header>
+  <hr>
+  <nav>
+    <a href="institution-registration.html" class="nav-button current-page">Institution's Details</a>
+    <a href="team-registration.html" class="nav-button">Team's Details</a>
+    <a href="participan-registration.html" class="nav-button">Participant's Details</a>
+  </nav>
+  <main class="registration-form">
+    <form action="team-registration.html">
+      Institution name:<br>
+      <select id="Institution" name="Institution" required>
+        <option value="Zut">Zambia University College of Technology</option>
+        <option value="MukUni" class="input-bar">Mukuba University</option>
+        <option value="UNZA" class="input-bar">University of Zambia</option>
+        <option value="CBU" class="input-bar">Copperbelt University</option>
+        <option value="MU" class="input-bar">Mulungushi University</option>
+        <option value="UNILUS" class="input-bar">University of Lusaka</option>
+        <option value="LAMMU" class="input-bar">Levy Mwanawasa Medical University</option>
+        <option value="EvelynHone" class="input-bar">Evelyn Hone College</option>
+        <option value="Baobab" class="input-bar">Baobab College</option>
+      </select><br>
+      <br>
+      City/Town:<br>
+      <input type="text" name="lastname" placeholder="e.g Lusaka" class="input-bar" required>
+      <br>
+      Province:<br>
+      <input type="text" name="province" placeholder="e.g Lusaka Province" class="input-bar" required>
+      <br>
+      Email Address:<br>
+      <input type="email" name="email" placeholder="e.g example@institution.com" class="input-bar" required>
+      <br>
+      <label for="Sport">Sport</label><br>
+      <select id="Sport" name="Sport" aria-placeholder="Select sport" required>
+        <option value="football" class="input-bar">Football</option>
+        <option value="Basketball" class="input-bar">Basketball</option>
+        <option value="Volleyball" class="input-bar">Volleyball</option>
+        <option value="football" class="input-bar">Football</option>
+        <option value="Basketball" class="input-bar">Basketball</option>
+        <option value="Volleyball" class="input-bar">Volleyball</option>
+        <option value="football" class="input-bar">Football</option>
+        <option value="Basketball" class="input-bar">Basketball</option>
+        <option value="Volleyball" class="input-bar">Volleyball</option>
+      </select><br><br>
+      <input type="submit" value="Next" class="submit-button">
+    </form>
+  </main>
+  <footer>
+    <p>@TEVISA</p>
+  </footer>
+
+</body>
+
+</html>

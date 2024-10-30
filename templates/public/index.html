@@ -1,0 +1,36 @@
+{% extends './public/base.html' %}
+
+{% block title %}Home - Tevisa{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center my-2">
+    <img src="{{ url_for('static', filename='/img/landing_img.jpg') }}" style="border-radius: 1.4em;" alt="" class="img-fluid" id="landing-page-img">
+</div>
+<div class="container d-flex justify-content-end my-3">
+    <div class="row">
+        <div class="col-sm-10">
+            <p class="lead">
+                Students are free to register in a sports discipline of interest with the patron. Currently the
+                available
+                sports disciplines are Netball, Chess, Football, Volleyball and Basketball.
+                Students travel to different colleges in Zambia to take part in tournaments like TEVISA games,
+                Heroes &
+                unity games, independence Games, ZAFUCCS games. Additionally, students also participate in
+                international
+                tournaments in neighboring countries under SADC like Namibia, Botswana & Swaziland.
+            </p>
+        </div>
+        <div class="col-sm-2">
+            <div class="row justify-content-end align-items-center">
+                <div class="col-sm-8">
+                    <a href="/inst_registration">
+                        <div class="btn btn-dark my-md-4 btn-outline-light">Register Now</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

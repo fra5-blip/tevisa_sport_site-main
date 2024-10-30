@@ -1,0 +1,122 @@
+body {
+  box-sizing: border-box;
+  font-family: arial;
+  font-size: small;
+
+}
+
+header {
+width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+li {
+  width: 100%;
+}
+.logo {
+  float: left;
+}
+
+.home-nav {
+  float: right;
+}
+
+a {
+  display: block;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+nav {
+  background-color: black;
+  width: 50%;
+  border: none;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  margin: auto;
+}
+
+.nav-button {
+  color: white;
+  display: inline-block;
+}
+
+@media (max-width: 600px){
+  .nav-button {
+    font-size: 12px;
+  }
+}
+
+.current-page {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
+
+hr {
+  border: 1px solid rgb(43, 43, 43);
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: auto;
+  padding: 10px;
+  margin-top: 12px;
+}
+
+form {
+  text-align: justify;
+  margin: auto;
+  padding: 10px;
+}
+
+input, .input-bar {
+  width: 93%;
+  align-items: center;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+
+select {
+  width: 100%;
+  align-items: center;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.submit-button {
+  width: 100px;
+  float: right;
+  border: none;
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
